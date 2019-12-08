@@ -1,0 +1,13 @@
+version: "3"
+services:
+  ubuntu-texlive-ja:
+    image: fuchami/alpine-latex
+    # image: paperist/alpine-texlive-ja
+    #build: .
+    command: sleep infinity
+    volumes:
+      - ../:/workdir
+      - ~/.gitconfig:/root/.gitconfig
+      - ./.latexmkrc:/root/.latexmkrc
+    environment:
+      SHELL: "/bin/sh"
